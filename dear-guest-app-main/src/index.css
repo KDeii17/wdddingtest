@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 30 50% 98%;
+    --foreground: 30 10% 30%;
+    --card: 0 0% 100%;
+    --card-foreground: 30 10% 30%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 30 10% 30%;
+    --primary: 340 60% 85%;
+    --primary-foreground: 340 30% 25%;
+    --secondary: 30 30% 94%;
+    --secondary-foreground: 30 10% 30%;
+    --muted: 30 25% 90%;
+    --muted-foreground: 30 10% 45%;
+    --accent: 40 50% 65%;
+    --accent-foreground: 40 50% 15%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 30 20% 85%;
+    --input: 30 20% 85%;
+    --ring: 340 60% 75%;
+    --radius: 1rem;
+
+    --sidebar-background: 30 30% 97%;
+    --sidebar-foreground: 30 10% 30%;
+    --sidebar-primary: 340 60% 85%;
+    --sidebar-primary-foreground: 340 30% 25%;
+    --sidebar-accent: 30 25% 92%;
+    --sidebar-accent-foreground: 30 10% 30%;
+    --sidebar-border: 30 20% 88%;
+    --sidebar-ring: 340 60% 75%;
+
+    --shadow-surface: 0 0 0 1px rgba(0,0,0,.04), 0 2px 6px rgba(0,0,0,.04), 0 8px 16px -4px rgba(0,0,0,.04);
+
+    --glass: rgba(255, 255, 255, 0.55);
+    --glass-border: rgba(255, 255, 255, 0.3);
+    --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.06);
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3 {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+    line-height: 1.6;
+  }
+}
+
+@layer utilities {
+  .font-khmer {
+    font-family: 'Kantumruy Pro', sans-serif;
+  }
+
+  .glass {
+    background: var(--glass);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--glass-shadow);
+  }
+
+  .glass-strong {
+    background: rgba(255, 255, 255, 0.72);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+  }
+
+  .glass-card {
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.05), inset 0 1px 0 rgba(255, 255, 255, 0.5);
+  }
+}
